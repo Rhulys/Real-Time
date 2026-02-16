@@ -22,7 +22,7 @@ O projeto foi desenhado seguindo princípios de Sistemas Distribuídos, garantin
  - Programação Defensiva: O sistema foi construído com blocos de try/catch ao redor das operações de banco de dados para garantir que, caso o Cache ou o DB falhem, o tempo real (Broadcast) continue funcionando.
 
 ## 🛠️ Como Executar
- - Clonar o repositório: `git clone https://github.com/seu-usuario/real-time-tracker`<br/>
+ - Clonar o repositório: `git clone https://github.com/Rhulys/Real-Time`<br/>
  - Subir a infraestrutura (Docker): `docker-compose up -d`<br/>
  - Instalar dependências: `npm instal`<br/>
  - Rodar o Servidor: `npx ts-node-dev src/server.t`<br/>
