@@ -9,7 +9,7 @@ services:
     image: amazon/dynamodb-local
     ports:
       - "8000:8000"
-    command: "-jae DynamoDBLocal.jar -sharedDb"
+    command: "-jar DynamoDBLocal.jar -sharedDb"
 
   redis-insight:
     image: redislabs/redisinsight:latest
