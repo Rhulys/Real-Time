@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>iFood Tracker Simulator</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+        #map { height: 600px; width: 100%; border-radius: 12px; }
+        body { font-family: sans-serif; padding: 20px; background: #f4f4f4; }
+    </style>
+</head>
+<body>
+    <h1>📍 Rider Real-Time Tracker</h1>
+    <div id="map"></div>
+
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        const socket = io("http://localhost:3000");
+        const map = L.map('map').setView([-23.56168, -46.65598], 16);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+        let riderMarker = null;
+
+        socket.emit("joinOrder", "pedido-123");
+
+        socket.on("locationUpdated", (data) => {
+            const { latitude, longitude } = data;
+            
+            if (!riderMarker) {
+                riderMarker = L.marker([latitude, longitude]).addTo(map)
+                    .bindPopup("Entregador em Movimento").openPopup();
+            } else {
+                riderMarker.setLatLng([latitude, longitude]);
+            }
+            
+            map.panTo([latitude, longitude]);
+        });
+    </script>
+</body>
+</html>
