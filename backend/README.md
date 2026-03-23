@@ -76,7 +76,7 @@ src/
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/Rhulys/rider-tracking
+git clone https://github.com/Rhulys/Real-Time
 cd rider-tracking
 ```
 
