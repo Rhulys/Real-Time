@@ -188,7 +188,7 @@ npx ts-node src/simulator.ts
 
 ## 📚 Documentação detalhada
 
--   [README do Backend](./README-backend.md) — arquitetura, eventos WebSocket, estrutura de dados
+-   [README do Backend](./backend/README.md) — arquitetura, eventos WebSocket, estrutura de dados
 -   [README do Frontend](./frontend/README.md) — componentes, hooks, decisões de design
 
 ---
