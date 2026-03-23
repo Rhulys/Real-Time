@@ -3,6 +3,7 @@
 Sistema completo de rastreamento de entregadores em tempo real — da posição GPS no celular do entregador até o mapa na tela do cliente, com latência abaixo de 200ms.
 
 Inspirado nos sistemas de telemetria de plataformas como iFood e Rappi.
+<img width="1270" height="604" alt="Captura de tela de 2026-03-23 16-32-36" src="https://github.com/user-attachments/assets/f283eed6-bff2-48c4-9327-a34ac3b0b14c" />
 
 ---
 
